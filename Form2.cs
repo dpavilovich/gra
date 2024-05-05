@@ -16,7 +16,7 @@ namespace gra
         private Button[,] buttons;
         private bool[,] mines;
         private bool[,] clicked;
-        private int totalMines = 35; // Zwiększono liczbę min do 35
+        private int totalMines = 35;
         private int totalClicked = 0;
 
         public Form2()
@@ -25,8 +25,6 @@ namespace gra
             buttons = new Button[gridSize, gridSize];
             mines = new bool[gridSize, gridSize];
             clicked = new bool[gridSize, gridSize];
-            this.AutoScroll = true; // Włącz przewijanie
-            this.AutoScrollMinSize = new Size(gridSize * 20, gridSize * 20); // Ustaw minimalny rozmiar obszaru przewijania
             this.Load += new EventHandler(Form2_Load);
         }
 
@@ -66,7 +64,7 @@ namespace gra
 
             if (mines[x, y])
             {
-                MessageBox.Show("Przegrałeś!");
+                MessageBox.Show("Trafiłeś na minę, przegrałeś!");
                 this.Close();
             }
             else
@@ -87,11 +85,11 @@ namespace gra
                 Button clickedButton = (Button)sender;
                 if (clickedButton.BackColor == Color.Red)
                 {
-                    clickedButton.BackColor = default(Color); // Odoznaczanie prawym przyciskiem
+                    clickedButton.BackColor = default(Color);
                 }
                 else
                 {
-                    clickedButton.BackColor = Color.Red; // Oznaczanie prawym przyciskiem
+                    clickedButton.BackColor = Color.Red;
                 }
             }
         }
