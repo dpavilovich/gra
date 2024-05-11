@@ -70,13 +70,28 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelSaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelSaper.Designer.cs">
+      <DependentUpon>PanelSaper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaperHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaperHistoryForm.Designer.cs">
+      <DependentUpon>SaperHistoryForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelSaper.resx">
+      <DependentUpon>PanelSaper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,7 +101,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SaperHistoryForm.resx">
+      <DependentUpon>SaperHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaperMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saper.jpg" />
+    <Content Include="saper.jpg" />
+    <Content Include="SaperHistory.txt" />
+    <None Include="Resources\SaperMenu1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

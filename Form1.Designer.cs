@@ -37,10 +37,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(74, 50);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(99, 62);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 98);
+            this.button1.Size = new System.Drawing.Size(227, 121);
             this.button1.TabIndex = 0;
             this.button1.Text = "SAPER";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,20 +48,20 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(326, 50);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(435, 62);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 97);
+            this.button2.Size = new System.Drawing.Size(245, 119);
             this.button2.TabIndex = 1;
             this.button2.Text = "GRA 2";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(74, 203);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(99, 250);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 108);
+            this.button3.Size = new System.Drawing.Size(227, 133);
             this.button3.TabIndex = 2;
             this.button3.Text = "GRA 3";
             this.button3.UseVisualStyleBackColor = true;
@@ -69,33 +69,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 150);
+            this.label1.Location = new System.Drawing.Point(95, 185);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(106, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Maciej Jarząbek";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(326, 203);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(435, 250);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 108);
+            this.button4.Size = new System.Drawing.Size(227, 133);
             this.button4.TabIndex = 4;
             this.button4.Text = "GRA 4";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

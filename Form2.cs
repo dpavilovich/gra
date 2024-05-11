@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,20 +13,39 @@ namespace gra
 {
     public partial class Form2 : Form
     {
-        private int gridSize = 15;
+        private int gridSize;
         private Button[,] buttons;
         private bool[,] mines;
         private bool[,] clicked;
-        private int totalMines = 35;
-        private int totalClicked = 0;
+        private int totalMines;
+        private int totalClicked;
+        private string playerName;
+        private string difficultyLevel;
+        private Stopwatch stopwatch;
+        private PanelSaper panelSaper;
+        private Timer timer;
 
-        public Form2()
+        public Form2(int gridSize, int totalMines, string playerName, string difficultyLevel, PanelSaper panelSaper)
         {
             InitializeComponent();
+            this.gridSize = gridSize;
+            this.totalMines = totalMines;
+            this.playerName = playerName;
+            this.difficultyLevel = difficultyLevel;
+            this.panelSaper = panelSaper;
             buttons = new Button[gridSize, gridSize];
             mines = new bool[gridSize, gridSize];
             clicked = new bool[gridSize, gridSize];
+            stopwatch = new Stopwatch();
+            timer = new Timer();
+            timer.Interval = 10;
+            timer.Tick += new EventHandler(Timer_Tick);
             this.Load += new EventHandler(Form2_Load);
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            label1.Text = $"Czas gry: {stopwatch.Elapsed.TotalSeconds:F2} sekund";
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -54,6 +74,8 @@ namespace gra
                 } while (mines[x, y]);
                 mines[x, y] = true;
             }
+            stopwatch.Start();
+            timer.Start();
         }
 
         private void Button_Click(object sender, EventArgs e)
@@ -64,6 +86,8 @@ namespace gra
 
             if (mines[x, y])
             {
+                timer.Stop();
+                stopwatch.Stop();
                 MessageBox.Show("Trafiłeś na minę, przegrałeś!");
                 this.Close();
             }
@@ -72,6 +96,10 @@ namespace gra
                 RevealButton(x, y);
                 if (totalClicked == gridSize * gridSize - totalMines)
                 {
+                    timer.Stop();
+                    stopwatch.Stop();
+                    string gameResult = $"Nazwa użytkownika: {playerName}, Poziom trudności: {difficultyLevel}, Czas: {stopwatch.Elapsed.TotalSeconds} sekund";
+                    panelSaper.AddGameToHistory(gameResult);
                     MessageBox.Show("Wygrałeś!");
                     this.Close();
                 }
