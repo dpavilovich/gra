@@ -120,13 +120,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SaperMenu.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\saper.jpg" />
     <Content Include="saper.jpg" />
     <Content Include="SaperHistory.txt" />
-    <None Include="Resources\SaperMenu1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
