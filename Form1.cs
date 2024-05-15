@@ -22,5 +22,11 @@ namespace gra
             PanelSaper panelsaper = new PanelSaper();
             panelsaper.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            flappybird flappy = new flappybird();
+            flappy.Show();
+        }
     }
 }

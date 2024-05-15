@@ -58,11 +58,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="flappy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="flappy.Designer.cs">
+      <DependentUpon>flappy.cs</DependentUpon>
     </Compile>
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
@@ -95,6 +95,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="flappy.resx">
+      <DependentUpon>flappy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelSaper.resx">
       <DependentUpon>PanelSaper.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +124,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\saper.jpg" />
+    <None Include="Resources\bird.png" />
+    <None Include="Resources\ground.png" />
+    <None Include="Resources\pipe.png" />
+    <None Include="Resources\pipedown.png" />
     <Content Include="saper.jpg" />
     <Content Include="SaperHistory.txt" />
   </ItemGroup>
