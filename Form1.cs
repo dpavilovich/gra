@@ -25,8 +25,8 @@ namespace gra
 
         private void button3_Click(object sender, EventArgs e)
         {
-            flappybird flappy = new flappybird();
-            flappy.Show();
+            flappypanel flappyp = new flappypanel();
+            flappyp.Show();
         }
     }
 }

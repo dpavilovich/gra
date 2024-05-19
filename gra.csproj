@@ -64,6 +64,12 @@
     <Compile Include="flappy.Designer.cs">
       <DependentUpon>flappy.cs</DependentUpon>
     </Compile>
+    <Compile Include="flappypanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flappypanel.Designer.cs">
+      <DependentUpon>flappypanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="SaperHistoryForm.Designer.cs">
       <DependentUpon>SaperHistoryForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="flappypanel.resx">
+      <DependentUpon>flappypanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
