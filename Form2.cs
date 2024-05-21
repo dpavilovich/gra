@@ -17,6 +17,7 @@ namespace gra
         private Button[,] buttons;
         private bool[,] mines;
         private bool[,] clicked;
+        private bool cheatMode;
         private int totalMines;
         private int totalClicked;
         private string playerName;
@@ -36,11 +37,14 @@ namespace gra
             buttons = new Button[gridSize, gridSize];
             mines = new bool[gridSize, gridSize];
             clicked = new bool[gridSize, gridSize];
+            cheatMode = false; 
             stopwatch = new Stopwatch();
             timer = new Timer();
             timer.Interval = 10;
             timer.Tick += new EventHandler(Timer_Tick);
             this.Load += new EventHandler(Form2_Load);
+            this.KeyDown += new KeyEventHandler(Form2_KeyDown); 
+            this.KeyPreview = true; 
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -154,6 +158,24 @@ namespace gra
                     for (int j = -1; j <= 1; j++)
                     {
                         RevealButton(x + i, y + j);
+                    }
+                }
+            }
+        }
+
+        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.T) 
+            {
+                cheatMode = !cheatMode;
+                for (int i = 0; i < gridSize; i++)
+                {
+                    for (int j = 0; j < gridSize; j++)
+                    {
+                        if (mines[i, j])
+                        {
+                            buttons[i, j].BackColor = cheatMode ? Color.Red : default(Color);
+                        }
                     }
                 }
             }

@@ -61,7 +61,7 @@ namespace gra
                     break;
                 case "Średni":
                     gridSize = 10;
-                    totalMines = 12;
+                    totalMines = 15;
                     break;
                 case "Trudny":
                     gridSize = 15;
